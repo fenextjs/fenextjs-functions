@@ -5,6 +5,9 @@ import { parseNumberCount } from "../NumberCount";
  * @param {number | string} n - The number or string to format as money.
  * @returns {string} The money formatted string.
  */
-export const parseMoney = (n: number | string) => {
-    return `$${parseNumberCount(n)}`;
+export const parseMoney = (
+    n: number | string,
+    options?: Intl.NumberFormatOptions,
+) => {
+    return `$${parseNumberCount(n, options)}`;
 };
