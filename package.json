@@ -1,6 +1,6 @@
 {
     "name": "fenextjs-functions",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "",
     "main": "./cjs/index.js",
     "module": "./cjs/index.js",
