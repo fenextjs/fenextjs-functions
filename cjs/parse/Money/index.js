@@ -8,8 +8,8 @@ const NumberCount_1 = require("../NumberCount");
  * @param {number | string} n - The number or string to format as money.
  * @returns {string} The money formatted string.
  */
-const parseMoney = (n) => {
-    return `$${(0, NumberCount_1.parseNumberCount)(n)}`;
+const parseMoney = (n, options) => {
+    return `$${(0, NumberCount_1.parseNumberCount)(n, options)}`;
 };
 exports.parseMoney = parseMoney;
 //# sourceMappingURL=index.js.map
