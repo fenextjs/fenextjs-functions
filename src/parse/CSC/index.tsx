@@ -5,7 +5,10 @@ import { parseString_to_City, parseCity_to_String } from "../City";
 
 export const parseCSC_to_CSCString = (
     data: CSCProps | undefined | null,
-): CSCStringProps => {
+): CSCStringProps | undefined => {
+    if(data == undefined || data == null){
+        return undefined
+    }
     try {
         return {
             country: parseCountry_to_String(data?.country),
@@ -19,7 +22,10 @@ export const parseCSC_to_CSCString = (
 
 export const parseCSCString_to_CSC = (
     data: CSCStringProps | undefined | null,
-): CSCProps => {
+): CSCProps  | undefined => {
+    if(data == undefined || data == null){
+        return undefined
+    }
     try {
         return {
             country: parseString_to_Country(data?.country),

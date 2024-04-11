@@ -2,7 +2,10 @@ import { CountryProps } from "fenextjs-interface";
 
 export const parseCountry_to_String = (
     data: CountryProps | undefined | null,
-): string => {
+): string | undefined => {
+    if(data == undefined || data == null){
+        return undefined
+    }
     try {
         return JSON.stringify(data);
     } catch {
@@ -12,7 +15,10 @@ export const parseCountry_to_String = (
 
 export const parseString_to_Country = (
     data: string | undefined | null,
-): CountryProps => {
+): CountryProps | undefined => {
+    if(data == undefined || data == null){
+        return undefined
+    }
     try {
         return JSON.parse(`${data ?? ""}`);
     } catch {
