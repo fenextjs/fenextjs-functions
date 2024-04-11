@@ -7,6 +7,6 @@
  * @returns {Promise} - A promise that resolves with the file contents
  */
 export declare const parseFile: (file: any, { updateProgress, fileText, }: {
-    fileText?: boolean | undefined;
+    fileText?: boolean;
     updateProgress: (progress: number) => void;
 }) => Promise<unknown>;

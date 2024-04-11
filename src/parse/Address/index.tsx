@@ -1,6 +1,8 @@
 import { AddressGoogle } from "fenextjs-interface";
 
-export const parseAddress_to_String = (data: AddressGoogle | undefined | null): string => {
+export const parseAddress_to_String = (
+    data: AddressGoogle | undefined | null,
+): string => {
     try {
         return JSON.stringify(data);
     } catch {
@@ -8,12 +10,14 @@ export const parseAddress_to_String = (data: AddressGoogle | undefined | null): 
     }
 };
 
-export const parseString_to_Address = (data: string | undefined | null): AddressGoogle => {
+export const parseString_to_Address = (
+    data: string | undefined | null,
+): AddressGoogle => {
     try {
-        return JSON.parse(`${data ?? ''}`);
+        return JSON.parse(`${data ?? ""}`);
     } catch {
         return {
-            formatted_address: `${data ?? ''}`,
+            formatted_address: `${data ?? ""}`,
         };
     }
 };

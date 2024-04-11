@@ -1,6 +1,8 @@
 import { CountryProps } from "fenextjs-interface";
 
-export const parseCountry_to_String = (data: CountryProps | undefined | null): string => {
+export const parseCountry_to_String = (
+    data: CountryProps | undefined | null,
+): string => {
     try {
         return JSON.stringify(data);
     } catch {
@@ -8,14 +10,16 @@ export const parseCountry_to_String = (data: CountryProps | undefined | null): s
     }
 };
 
-export const parseString_to_Country = (data: string | undefined | null): CountryProps => {
+export const parseString_to_Country = (
+    data: string | undefined | null,
+): CountryProps => {
     try {
-        return JSON.parse(`${data ?? ''}`);
+        return JSON.parse(`${data ?? ""}`);
     } catch {
         return {
-            id:-1,
-            code:"",
-            text:`${data ?? ''}`
+            id: -1,
+            code: "",
+            text: `${data ?? ""}`,
         };
     }
 };
