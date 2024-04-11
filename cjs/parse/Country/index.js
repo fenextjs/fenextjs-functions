@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseString_to_Country = exports.parseCountry_to_String = void 0;
 const parseCountry_to_String = (data) => {
+    if (data == undefined || data == null) {
+        return undefined;
+    }
     try {
         return JSON.stringify(data);
     }
@@ -11,6 +14,9 @@ const parseCountry_to_String = (data) => {
 };
 exports.parseCountry_to_String = parseCountry_to_String;
 const parseString_to_Country = (data) => {
+    if (data == undefined || data == null) {
+        return undefined;
+    }
     try {
         return JSON.parse(`${data ?? ""}`);
     }

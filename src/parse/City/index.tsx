@@ -3,8 +3,8 @@ import { CityProps } from "fenextjs-interface";
 export const parseCity_to_String = (
     data: CityProps | undefined | null,
 ): string | undefined => {
-    if(data == undefined || data == null){
-        return undefined
+    if (data == undefined || data == null) {
+        return undefined;
     }
     try {
         return JSON.stringify(data);
@@ -16,8 +16,8 @@ export const parseCity_to_String = (
 export const parseString_to_City = (
     data: string | undefined | null,
 ): CityProps | undefined => {
-    if(data == undefined || data == null){
-        return undefined
+    if (data == undefined || data == null) {
+        return undefined;
     }
     try {
         return JSON.parse(`${data ?? ""}`);

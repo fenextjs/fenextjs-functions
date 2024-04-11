@@ -6,8 +6,8 @@ import { parseString_to_City, parseCity_to_String } from "../City";
 export const parseCSC_to_CSCString = (
     data: CSCProps | undefined | null,
 ): CSCStringProps | undefined => {
-    if(data == undefined || data == null){
-        return undefined
+    if (data == undefined || data == null) {
+        return undefined;
     }
     try {
         return {
@@ -22,9 +22,9 @@ export const parseCSC_to_CSCString = (
 
 export const parseCSCString_to_CSC = (
     data: CSCStringProps | undefined | null,
-): CSCProps  | undefined => {
-    if(data == undefined || data == null){
-        return undefined
+): CSCProps | undefined => {
+    if (data == undefined || data == null) {
+        return undefined;
     }
     try {
         return {

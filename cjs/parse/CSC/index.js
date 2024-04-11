@@ -5,6 +5,9 @@ const Country_1 = require("../Country");
 const State_1 = require("../State");
 const City_1 = require("../City");
 const parseCSC_to_CSCString = (data) => {
+    if (data == undefined || data == null) {
+        return undefined;
+    }
     try {
         return {
             country: (0, Country_1.parseCountry_to_String)(data?.country),
@@ -18,6 +21,9 @@ const parseCSC_to_CSCString = (data) => {
 };
 exports.parseCSC_to_CSCString = parseCSC_to_CSCString;
 const parseCSCString_to_CSC = (data) => {
+    if (data == undefined || data == null) {
+        return undefined;
+    }
     try {
         return {
             country: (0, Country_1.parseString_to_Country)(data?.country),
