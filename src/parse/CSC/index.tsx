@@ -3,7 +3,7 @@ import { parseString_to_Country, parseCountry_to_String } from "../Country";
 import { parseString_to_State, parseState_to_String } from "../State";
 import { parseString_to_City, parseCity_to_String } from "../City";
 
-export const parseCSC_to_String = (
+export const parseCSC_to_CSCString = (
     data: CSCProps | undefined | null,
 ): CSCStringProps => {
     try {
