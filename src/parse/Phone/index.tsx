@@ -16,8 +16,12 @@ export const parseString_to_Phone = (
     try {
         return JSON.parse(`${data ?? ""}`);
     } catch {
+        const num = `${data}`.replace(/[^1-9-+ ]/g, '');
+        const n = num.split(/[ -]/g).filter((e) => e != '');
         return {
-            number: `${data ?? ""}`,
+            number: n?.pop() ?? '',
+            code: n?.join('-'),
+            tel: num,
         };
     }
 };
