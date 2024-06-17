@@ -1,6 +1,6 @@
 {
   "name": "fenextjs-functions",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "",
   "main": "./cjs/index.js",
   "module": "./cjs/index.js",
@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/franciscoblancojn/fenextjs-functions#readme",
   "dependencies": {
-    "fenextjs-interface": "4.0.0",
+    "fenextjs-interface": "4.1.0",
     "fenextjs-nextjs-dependencies": "2.0.0"
   },
   "files": [
