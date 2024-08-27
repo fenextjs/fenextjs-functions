@@ -13,3 +13,4 @@ export * from "./City";
 export * from "./Phone";
 export * from "./CSC";
 export * from "./Csv";
+export * from "./Enum";
