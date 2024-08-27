@@ -3,11 +3,14 @@ export type parseEnum_to_String_SW<T extends string> = {
 };
 
 export interface parseEnum_to_String_Options {
-    valueNull?:string
+    valueNull?: string;
 }
 
 export const parseEnum_to_String =
-    <T extends string>(sw: parseEnum_to_String_SW<T>,options?:parseEnum_to_String_Options) =>
+    <T extends string>(
+        sw: parseEnum_to_String_SW<T>,
+        options?: parseEnum_to_String_Options,
+    ) =>
     (type?: T | null | undefined): string => {
-        return type ? sw[type] : (options?.valueNull ??  "");
+        return type ? sw[type] : options?.valueNull ?? "";
     };
