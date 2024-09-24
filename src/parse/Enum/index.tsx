@@ -11,6 +11,6 @@ export const parseEnum_to_String =
         sw: parseEnum_to_String_SW<T, V>,
         options?: parseEnum_to_String_Options<V>,
     ) =>
-        (type?: T | null | undefined): V | "" => {
-            return type ? sw[type] : options?.valueNull ?? "";
-        };
+    (type?: T | null | undefined): V | "" => {
+        return type ? sw[type] : options?.valueNull ?? "";
+    };
