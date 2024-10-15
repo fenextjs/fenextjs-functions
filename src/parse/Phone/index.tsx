@@ -18,9 +18,11 @@ export const parseString_to_Phone = (
     } catch {
         const num = `${data}`.replace(/[^1-9-+ ]/g, "");
         const n = num.split(/[ -]/g).filter((e) => e != "");
+        const number = n?.pop() ?? ""
+        const code = n?.join("-")
         return {
-            number: n?.pop() ?? "",
-            code: n?.join("-"),
+            number : number == "" ? undefined : number,
+            code : code == "" ? undefined : code,
             tel: num,
         };
     }
