@@ -1,4 +1,5 @@
 import { CountryProps } from "fenextjs-interface";
+import { getRuteCountryImg } from "country-state-city-nextjs";
 
 export const parseCountry_to_String = (
     data: CountryProps | undefined | null,
@@ -20,7 +21,13 @@ export const parseString_to_Country = (
         return undefined;
     }
     try {
-        return JSON.parse(`${data ?? ""}`);
+        const country =  JSON.parse(`${data ?? ""}`) as CountryProps;
+
+        if(country && country?.id && country?.text && !country?.img){
+            country.img = getRuteCountryImg(country)
+        }
+
+        return country
     } catch {
         return {
             id: -1,
