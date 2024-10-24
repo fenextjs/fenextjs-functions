@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseString_to_Country = exports.parseCountry_to_String = void 0;
+const country_state_city_nextjs_1 = require("country-state-city-nextjs");
 const parseCountry_to_String = (data) => {
     if (data == undefined || data == null) {
         return undefined;
@@ -18,7 +19,11 @@ const parseString_to_Country = (data) => {
         return undefined;
     }
     try {
-        return JSON.parse(`${data ?? ""}`);
+        const country = JSON.parse(`${data ?? ""}`);
+        if (country && country?.id && country?.text && !country?.img) {
+            country.img = (0, country_state_city_nextjs_1.getRuteCountryImg)(country);
+        }
+        return country;
     }
     catch {
         return {

@@ -21,13 +21,13 @@ export const parseString_to_Country = (
         return undefined;
     }
     try {
-        const country =  JSON.parse(`${data ?? ""}`) as CountryProps;
+        const country = JSON.parse(`${data ?? ""}`) as CountryProps;
 
-        if(country && country?.id && country?.text && !country?.img){
-            country.img = getRuteCountryImg(country)
+        if (country && country?.id && country?.text && !country?.img) {
+            country.img = getRuteCountryImg(country);
         }
 
-        return country
+        return country;
     } catch {
         return {
             id: -1,
