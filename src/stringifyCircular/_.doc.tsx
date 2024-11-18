@@ -1,21 +1,24 @@
 export default {
     id: "stringifyCircular",
     name: "stringifyCircular",
-    description: "Función que convierte un objeto en una cadena JSON, manejando referencias circulares para evitar errores en `JSON.stringify`.",
+    description:
+        "Función que convierte un objeto en una cadena JSON, manejando referencias circulares para evitar errores en `JSON.stringify`.",
     props: [
         {
             id: "obj",
             type: "object",
             require: true,
-            description: "Objeto que se convertirá a cadena JSON, con detección de referencias circulares.",
-        }
+            description:
+                "Objeto que se convertirá a cadena JSON, con detección de referencias circulares.",
+        },
     ],
     returns: [
         {
             id: "jsonString",
             type: "string",
-            description: "Cadena JSON resultante del objeto, omitiendo referencias circulares.",
-        }
+            description:
+                "Cadena JSON resultante del objeto, omitiendo referencias circulares.",
+        },
     ],
     useExample: [
         {
@@ -23,7 +26,7 @@ export default {
             content: `const obj = {};
 obj.self = obj;
 const jsonString = stringifyCircular(obj);
-console.log(jsonString);`
-        }
-    ]
+console.log(jsonString);`,
+        },
+    ],
 };

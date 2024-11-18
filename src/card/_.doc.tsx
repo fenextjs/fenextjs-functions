@@ -1,20 +1,23 @@
 export default {
     id: "GetCardType",
     name: "GetCardType",
-    description: "La función GetCardType permite identificar el tipo de tarjeta (VISA, Mastercard, AMEX, etc.) a partir de un número dado.",
+    description:
+        "La función GetCardType permite identificar el tipo de tarjeta (VISA, Mastercard, AMEX, etc.) a partir de un número dado.",
     props: [
         {
             id: "n",
             type: "number | string",
             require: true,
-            description: "Número de la tarjeta que se analizará para determinar su tipo. Puede ser un valor numérico o un string.",
-        }
+            description:
+                "Número de la tarjeta que se analizará para determinar su tipo. Puede ser un valor numérico o un string.",
+        },
     ],
     extras: [
         {
             id: "Card_Enum",
             title: "Card_Enum",
-            description: "Enumeración que define los tipos de tarjetas disponibles.",
+            description:
+                "Enumeración que define los tipos de tarjetas disponibles.",
             tableItems: [
                 {
                     Nombre: "VISA",
@@ -60,29 +63,30 @@ export default {
                     Nombre: "OTHER",
                     Descripcion: "Tipo de tarjeta desconocido o no reconocido.",
                     Default: null,
-                }
-            ]
-        }
+                },
+            ],
+        },
     ],
     returns: [
         {
             id: "Card_Enum",
             type: "Card_Enum",
-            description: "El tipo de tarjeta identificado, representado por el enumerado Card_Enum.",
-        }
+            description:
+                "El tipo de tarjeta identificado, representado por el enumerado Card_Enum.",
+        },
     ],
     useExample: [
         {
             text: "Detectar tipo de tarjeta VISA",
-            content: `GetCardType("4111111111111111") // Retorna Card_Enum.VISA`
+            content: `GetCardType("4111111111111111") // Retorna Card_Enum.VISA`,
         },
         {
             text: "Detectar tipo de tarjeta Mastercard",
-            content: `GetCardType("5500000000000004") // Retorna Card_Enum.MASTERCARD`
+            content: `GetCardType("5500000000000004") // Retorna Card_Enum.MASTERCARD`,
         },
         {
             text: "Detectar tipo de tarjeta desconocida",
-            content: `GetCardType("1234567890") // Retorna Card_Enum.OTHER`
-        }
-    ]
+            content: `GetCardType("1234567890") // Retorna Card_Enum.OTHER`,
+        },
+    ],
 };

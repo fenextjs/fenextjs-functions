@@ -1,7 +1,8 @@
 export default {
     id: "env_log",
     name: "env_log",
-    description: "Función que imprime un mensaje en la consola si la variable de entorno `NEXT_PUBLIC_LOG` está configurada como 'TRUE'.",
+    description:
+        "Función que imprime un mensaje en la consola si la variable de entorno `NEXT_PUBLIC_LOG` está configurada como 'TRUE'.",
     props: [
         {
             id: "data",
@@ -19,30 +20,32 @@ export default {
             id: "options.name",
             type: "string",
             require: false,
-            description: "Nombre que aparece junto al mensaje de log en la consola, en mayúsculas.",
+            description:
+                "Nombre que aparece junto al mensaje de log en la consola, en mayúsculas.",
         },
         {
             id: "options.color",
             type: "string",
             require: false,
-            description: "Color del texto del mensaje de log en la consola. El valor predeterminado es 'white'.",
-        }
+            description:
+                "Color del texto del mensaje de log en la consola. El valor predeterminado es 'white'.",
+        },
     ],
     returns: [
         {
             id: "void",
             type: "void",
             description: "Esta función no tiene valor de retorno.",
-        }
+        },
     ],
     useExample: [
         {
             text: "Imprimir mensaje de log básico",
-            content: `env_log("This is a log message");`
+            content: `env_log("This is a log message");`,
         },
         {
             text: "Imprimir mensaje de log con nombre y color",
-            content: `env_log("This is a log message", { name: "Info", color: "blue" });`
-        }
-    ]
+            content: `env_log("This is a log message", { name: "Info", color: "blue" });`,
+        },
+    ],
 };
