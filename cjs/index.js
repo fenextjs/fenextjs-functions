@@ -11,4 +11,5 @@ tslib_1.__exportStar(require("./id"), exports);
 tslib_1.__exportStar(require("./sleep"), exports);
 tslib_1.__exportStar(require("./stringifyCircular"), exports);
 tslib_1.__exportStar(require("./donwload"), exports);
+tslib_1.__exportStar(require("./cleanTextForTranslate"), exports);
 //# sourceMappingURL=index.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/cleanTextForTranslate/index.tsx"],"names":[],"mappings":";;;AAAO,MAAM,qBAAqB,GAAG,CAAC,IAAY,EAAE,EAAE;IAClD,OAAO,IAAI;SACN,UAAU,CAAC,KAAK,EAAE,EAAE,CAAC;SACrB,UAAU,CAAC,IAAI,EAAE,EAAE,CAAC;SACpB,OAAO,CAAC,QAAQ,EAAE,GAAG,CAAC;SACtB,IAAI,EAAE,CAAC;AAChB,CAAC,CAAC;AANW,QAAA,qBAAqB,yBAMhC"}
