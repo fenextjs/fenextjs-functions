@@ -1,0 +1,8 @@
+# parseAddress
+
+Conjunto de funciones para convertir entre un objeto `AddressGoogle` y su representación en cadena JSON.
+
+[object Object]
+
+[object Object]
+
