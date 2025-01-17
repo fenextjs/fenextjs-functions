@@ -8,16 +8,14 @@ export default {
             id: "text",
             type: "string",
             require: true,
-            description:
-                "Texto a tranducir.",
+            description: "Texto a tranducir.",
         },
     ],
     returns: [
         {
             id: "text",
             type: "string",
-            description:
-                "Texto Limpio para traducir.",
+            description: "Texto Limpio para traducir.",
         },
     ],
     useExample: [
