@@ -1,4 +1,4 @@
-import { TypeDate } from "fenextjs-interface/cjs/Date";
+import { TypeDate } from "fenextjs-interface/cjs/Day";
 /**
  * Converts a Date object into a string in the "YYYY-MM-DD" format.
  *
