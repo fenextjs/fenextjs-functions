@@ -8,16 +8,14 @@ export default {
             id: "input",
             type: "object",
             require: true,
-            description:
-                "El input a combertir en string.",
+            description: "El input a combertir en string.",
         },
     ],
     returns: [
         {
             id: "URLSearchParams",
             type: "string",
-            description:
-                "La cadena formateada para usar en la query.",
+            description: "La cadena formateada para usar en la query.",
         },
     ],
     useExample: [

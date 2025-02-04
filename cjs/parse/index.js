@@ -17,4 +17,5 @@ tslib_1.__exportStar(require("./Phone"), exports);
 tslib_1.__exportStar(require("./CSC"), exports);
 tslib_1.__exportStar(require("./Csv"), exports);
 tslib_1.__exportStar(require("./Enum"), exports);
+tslib_1.__exportStar(require("./Input"), exports);
 //# sourceMappingURL=index.js.map

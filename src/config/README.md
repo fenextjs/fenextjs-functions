@@ -12,14 +12,15 @@ import { CONFIG } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo | Requerido | Default | Descripcion |
-| --------- | ---- | --------- | ------- | ----------- |
-| EMPY | boolean | sí |  | Indica si la funcionalidad EMPY está habilitada. Se activa si la variable de entorno NEXT_PUBLIC_EMPY es igual a 'TRUE'. |
-| MODATA | boolean | sí |  | Indica si la funcionalidad MODATA está habilitada. Se activa si la variable de entorno NEXT_PUBLIC_MODATA es igual a 'TRUE'. |
-| LOG | boolean | sí |  | Indica si la funcionalidad de registro de LOG está habilitada. Se activa si la variable de entorno NEXT_PUBLIC_LOG es igual a 'TRUE'. |
+| Parámetro | Tipo    | Requerido | Default | Descripcion                                                                                                                           |
+| --------- | ------- | --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| EMPY      | boolean | sí        |         | Indica si la funcionalidad EMPY está habilitada. Se activa si la variable de entorno NEXT_PUBLIC_EMPY es igual a 'TRUE'.              |
+| MODATA    | boolean | sí        |         | Indica si la funcionalidad MODATA está habilitada. Se activa si la variable de entorno NEXT_PUBLIC_MODATA es igual a 'TRUE'.          |
+| LOG       | boolean | sí        |         | Indica si la funcionalidad de registro de LOG está habilitada. Se activa si la variable de entorno NEXT_PUBLIC_LOG es igual a 'TRUE'. |
+
 ### Usos
 
-- Uso de CONFIG
+-   Uso de CONFIG
 
 ```tsx copy
 if (CONFIG.LOG) {
@@ -27,7 +28,7 @@ if (CONFIG.LOG) {
 }
 ```
 
-- Verificar MODATA
+-   Verificar MODATA
 
 ```tsx copy
 if (CONFIG.MODATA) {
@@ -35,11 +36,10 @@ if (CONFIG.MODATA) {
 }
 ```
 
-- Condicionar funcionalidad según EMPY
+-   Condicionar funcionalidad según EMPY
 
 ```tsx copy
 if (CONFIG.EMPY) {
     console.log("EMPY feature is enabled.");
 }
 ```
-

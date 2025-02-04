@@ -14,3 +14,4 @@ export * from "./Phone";
 export * from "./CSC";
 export * from "./Csv";
 export * from "./Enum";
+export * from "./Input";
