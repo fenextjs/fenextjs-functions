@@ -16,7 +16,7 @@ export const parseString_to_Phone = (
     try {
         return JSON.parse(`${data ?? ""}`);
     } catch {
-        const num = `${data}`.replace(/[^1-9-+ ]/g, "");
+        const num = `${data}`.replace(/[^0-9-+ ]/g, "");
         const n = num.split(/[ -]/g).filter((e) => e != "");
         const number = n?.pop() ?? "";
         const code = n?.join("-");

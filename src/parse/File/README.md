@@ -12,20 +12,18 @@ import { parseFile } from "fenextjs";
 
 ### Parámetros
 
-| Parámetro | Tipo                                                                   | Requerido | Default | Descripcion                                                          |
-| --------- | ---------------------------------------------------------------------- | --------- | ------- | -------------------------------------------------------------------- |
-| file      | any                                                                    | sí        |         | El archivo a leer.                                                   |
-| options   | \{ fileText?: boolean; updateProgress: (progress: number) =\> void; \} | sí        |         | Opciones de configuración, incluyendo `fileText` y `updateProgress`. |
-
+| Parámetro | Tipo | Requerido | Default | Descripcion |
+| --------- | ---- | --------- | ------- | ----------- |
+| file | any | sí |  | El archivo a leer. |
+| options | \{ fileText?: boolean; updateProgress: (progress: number) =\> void; \} | sí |  | Opciones de configuración, incluyendo `fileText` y `updateProgress`. |
 ### Returns
 
-| Parametro    | Tipo           | Descripcion                                                                                 |
-| ------------ | -------------- | ------------------------------------------------------------------------------------------- |
-| fileContents | Promise\<any\> | Una promesa que se resuelve con el contenido del archivo, ya sea en formato texto o base64. |
-
+| Parametro | Tipo | Descripcion |
+| --------- | ---- | ----------- |
+| fileContents | Promise\<any\>  | Una promesa que se resuelve con el contenido del archivo, ya sea en formato texto o base64. |
 ### Usos
 
--   Leer un archivo como texto con progreso de carga
+- Leer un archivo como texto con progreso de carga
 
 ```tsx copy
 const file = new File(["Hello, world!"], "hello.txt", { type: "text/plain" });
@@ -34,3 +32,4 @@ parseFile(file, { updateProgress, fileText: true })
     .then((content) => console.log("Contenido del archivo:", content))
     .catch((error) => console.error("Error al leer el archivo:", error));
 ```
+
