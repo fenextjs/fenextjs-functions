@@ -1,7 +1,7 @@
-export const getProcessEnv = (key:string) => {
+export const getProcessEnv = (key: string) => {
     try {
-        return process?.env?.[key]
-    } catch  {
-        return null
+        return process?.env?.[key];
+    } catch {
+        return null;
     }
-}
+};
